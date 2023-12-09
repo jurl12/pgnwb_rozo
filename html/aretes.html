@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARETES</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="carrito.js"></script>
+</head>
+
+<body><div class="titulo">
+           
+        </div>
+        <main>
+                <header>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="zapatos.html">Zapatos</a></li>
+                            <li><a href="gorras.html">Gorras</a></li>
+                            <li><a href="aretes.html">Piercings</a></li>
+                            <li><a href="#" id="carrito">Carrito (0)</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </main>
+        
+            
+<div class="todo">
+            <div class="producto">
+                <img src="/images/A.webp"  alt="Aretes" />
+                <h3>Piercing pequeño</h3>
+                <p>Piercing en acero de diferentes forma y tamaño</p>
+                <p>Precio: $2.000 COP</p>
+                <button onclick="agregarAlCarrito('piercing pequeño', 2000 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/AR.jpg"  alt="Aretes" />
+                <h3>Piercing colgante</h3>
+                <p>Piercing en acero de diferentes forma y tamaño</p>
+                <p>Precio: $3.000 COP</p>
+                <button onclick="agregarAlCarrito('Piercing colgante ',3000 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/arete.webp"  alt="Aretes"  class="aretes">
+                <h3>Piercing diseñado</h3>
+                <p>Piercing en acero de diferentes forma y tamaño</p>
+                <p>Precio: $3.000 COP</p>
+                <button onclick="agregarAlCarrito('Piercing diseñado ',3000 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/aretes.jpg"  alt="Aretes" class="aretes"/>
+                <h3>Piercing plata</h3>
+                <p>Piercing en plata de diferentes forma y tamaño</p>
+                <p>Precio: $20.000 COP</p>
+                <button onclick="agregarAlCarrito('Piercing plata ',20000 )">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/aaaretes.jpg"  alt="Aretes" class="aretes" />
+                <h3>Piercing Pequeño</h3>
+                <p>Piercing en acero  de diferentes forma y tamaño</p>
+                <p>Precio: $2.000 COP</p>
+                <button onclick="agregarAlCarrito('Piercing Pequeño ',2000 )">Agregar al carrito</button>
+            </div></div>
+            <div class="todo">
+                <div class="producto">
+                    <img src="/images/shopping.webp"  alt="Aretes" />
+                    <h3>Piercing de la ceja</h3>
+                    <p>piercin de plata brillante</p>
+                    <p>Precio: $30.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('piercing pequeño', 50000 )">Agregar al carrito</button>
+                    
+                </div>
+                <div class="producto">
+                    <img src="/images/shopping (1).webp"  alt="Aretes" />
+                    <h3>Piercing de la ceja</h3>
+                    <p>Piercing de plata normal</p>
+                    <p>Precio: $5.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Piercing colgante ',5000 )">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/shopping (2).webp"  alt="Aretes"  class="aretes">
+                    <h3>Piercing para nariz</h3>
+                    <p>piercing multicolor para la nariz vario color </p>
+                    <p>Precio: $5.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Piercing diseñado ',5000 )">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/shopping (3).webp"  alt="Aretes" class="aretes"/>
+                    <h3>Piercing de goma</h3>
+                    <p>Piercing en goma diferentes estilos</p>
+                    <p>Precio: $5.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Piercing plata ',5000 )">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/shopping6.webp"  alt="Aretes" class="aretes" />
+                    <h3>Piercing ceja</h3>
+                    <p>Piercing en acero  de diferentes forma y tamaño</p>
+                    <p>Precio: $2.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Piercing Pequeño ',2000 )">Agregar al carrito</button>
+                </div></div>
+
+                <button onclick="abrirVentanaModal()">Crear Nuevo/Modificar Existente</button>
+
+
+                <div id="miVentanaModal" class="ventana-modal">
+                    <div class="contenido-ventana-modal">
+                      <span class="cerrar" onclick="cerrarVentanaModal()">&times;</span>
+                      <h2>Crear/Modificar Producto</h2>
+                      <form id="formularioProducto">
+                        <label for="nombreProducto">Nombre del producto:</label><br>
+                        <input type="text" id="nombreProducto" name="nombreProducto"><br>
+                        <label for="precioProducto">Precio:</label><br>
+                        <input type="number" id="precioProducto" name="precioProducto"><br>
+                        <label for="descripcionProducto">Descripción:</label><br>
+                        <textarea id="descripcionProducto" name="descripcionProducto"></textarea><br>
+                        <button onclick="guardarProducto()">Guardar</button>
+                      </form>
+                    </div>
+                  </div>
+    
+            <div id="carrito">
+                <h2>Carrito de compras</h2>
+                <ul id="listaCarrito">
+                    <!-- Aquí se agregarán los productos seleccionados -->
+                </ul>
+                <p>Total: <span id="totalCarrito">$0.00</span></p>
+                <button onclick="realizarCompra()">Realizar compra <i class="fa-solid fa-cart-shopping" style="color: #092cdc;"></i> </button>
+                <button onclick="limpiarCarrito()">Limpiar Carrito</button>
+
+            </div>
+        
+           
+            <input type="text" id="filtroNombre" placeholder="Filtrar por nombre">
+            <button onclick="filtrarPorNombre()">Filtrar por nombre</button>
+            <select id="filtroCategoria">
+                <option value="todos">Todos</option>
+                <option value="zapatos">Zapatos</option>
+                <option value="gorras">Gorras</option>
+                <option value="piercings">Piercings</option>
+            </select>
+            <button onclick="filtrarPorCategoria()">Filtrar por categoría</button>
+            <button onclick="ordenarPorPrecio('asc')">Ordenar por precio ascendente</button>
+            <button onclick="ordenarPorPrecio('desc')">Ordenar por precio descendente</button>
+    
+            <div class="container">
+                <p class="textcaall"><i class="fa-solid fa-phone-volume" style="color: #f20202;"></i> call 3246638261</p>
+            </div>
+        </main>
+
+
+       
+        
+
+    
+</body>
+</html>

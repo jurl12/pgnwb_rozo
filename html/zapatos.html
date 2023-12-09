@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="carrito.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="zapatos.html">Zapatos</a></li>
+                    <li><a href="gorras.html">Gorras</a></li>
+                    <li><a href="aretes.html">Piercings</a></li>
+                    <li><a href="#" id="carrito">Carrito (0)</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="todo">
+            <div class="producto">
+                <img src="/images/z.jpg " alt="Zapato" />
+                <h3>NIKE Cross</h3>
+                <p>Tenis Nike Hombre Cross Training Air Max Alpha Trainer 5 (TELA).</p>
+                <p>Precio: $100.000</p>
+                <button onclick="agregarAlCarrito('NIKE Cross',100000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/za.jpg " alt="Zapato" />
+                <h3>NIKE Air Max</h3>
+                <p>TENIS AIR MAX EXCEE HOMBRE NIKE excelente calidad.</p>
+                <p>Precio: $150.000</p>
+                <button onclick="agregarAlCarrito('NIKE Air Max',150000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/zap.jpg " alt="Zapato" />
+                <h3>NIKE SB</h3>
+                <p>NIKE SB Hombres excelente calida Nueva Exhibicion de varios colores.</p>
+                <p>Precio: $150.000</p>
+                <button onclick="agregarAlCarrito('NIKE SB',150000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/zapa.jpg " alt="Zapato" />
+                <h3>Tenis NIKE R6</h3>
+                <p>Tenis Nike Hombre Running Revolution 6 excelente calidad (TELA).</p>
+                <p>Precio: $180.000</p>
+                <button onclick="agregarAlCarrito('enis NIKE R6',180000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/zapatoo.jpg " alt="Zapato" />
+                <h3>NIKE Air Max</h3>
+                <p>TENIS NIKE HOMBRE MODA AIR MAX 90 con buena calidad.</p>
+                <p>Precio: $180.000</p>
+                <button onclick="agregarAlCarrito('NIKE Air Max',180000)">Agregar al carrito</button>
+            </div>
+                </div>
+                <div class="todo2">
+                    <div class="producto">
+                        <img src="/images/nueva1.jpg" alt="Zapato" />
+                        <h3>NIKE </h3>
+                        <p>TENIS NIKE HMIXTO MODA BLANCCO CON NEGRO</p>
+                        <p>Precio: $220.000</p>
+                        <button class="btn1" onclick="agregarAlCarrito('NIKE Air Max',220000)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/nueva2.jpg" alt="Zapato" />
+                        <h3>NIKE </h3>
+                        <p>TENIS NIKE  MIXTO CAFE CLARO CON BLANCO DE BUENA CALIDAD</p>
+                        <p>Precio: $220.000</p>
+                        <button class="btn1" onclick="agregarAlCarrito('NIKE Air Max',220000)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/nueva3.webp" alt="Zapato" />
+                        <h3>TENIS COLEGIALES</h3>
+                        <p>ZAPATOS COLEGIO SCHOOLY NEGRO CON BLANCO</p>
+                        <p>Precio: $120.000</p>
+                        <button class="btn1" onclick="agregarAlCarrito('NIKE Air Max',120000)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/nuevo4.webp" alt="Zapato" />
+                        <h3>CONVERSE</h3>
+                        <p>ZAPATOS DE BUENA CALIDAD CONVERSE BLANCOS CON AZUL OSCURO</p>
+                        <p>Precio: $150.000</p>
+                        <button class="btn1" onclick="agregarAlCarrito('NIKE Air Max',150000)">Agregar al carrito</button>
+                    </div>
+                    <div class="producto">
+                        <img src="/images/nuevo5.jpg" alt="Zapato" />
+                        <h3>NIKE AIR FORCE</h3>
+                        <p>ZAPATOS NIKE AIR FORCE CON BUENA CALIDAD DE COLOR BLANCO</p>
+                        <p>Precio: $200.000</p>
+                        <button class="btn1" onclick="agregarAlCarrito('NIKE Air Max',200000)">Agregar al carrito</button>
+                    </div>
+                
+                </div>
+                <button onclick="abrirVentanaModal()">Crear Nuevo/Modificar Existente</button>
+
+
+                <div id="miVentanaModal" class="ventana-modal">
+                    <div class="contenido-ventana-modal">
+                      <span class="cerrar" onclick="cerrarVentanaModal()">&times;</span>
+                      <h2>Crear/Modificar Producto</h2>
+                      <form id="formularioProducto">
+                        <label for="nombreProducto">Nombre del producto:</label><br>
+                        <input type="text" id="nombreProducto" name="nombreProducto"><br>
+                        <label for="precioProducto">Precio:</label><br>
+                        <input type="number" id="precioProducto" name="precioProducto"><br>
+                        <label for="descripcionProducto">Descripción:</label><br>
+                        <textarea id="descripcionProducto" name="descripcionProducto"></textarea><br>
+                        <button onclick="guardarProducto()">Guardar</button>
+                      </form>
+                    </div>
+                  </div>
+        
+
+        <div id="carrito">
+            <h2>Carrito de compras</h2>
+            <ul id="listaCarrito">
+                <!-- Aquí se agregarán los productos seleccionados -->
+            </ul>
+            <p>Total: <span id="totalCarrito">$0.00</span></p>
+            <button onclick="realizarCompra()">Realizar compra <i class="fa-solid fa-cart-shopping" style="color: #092cdc;"></i> </button>
+        </div>
+
+        <input type="text" id="filtroNombre" placeholder="Filtrar por nombre">
+        <button onclick="filtrarPorNombre()">Filtrar por nombre</button>
+        <select id="filtroCategoria">
+            <option value="todos">Todos</option>
+            <option value="zapatos">Zapatos</option>
+            <option value="gorras">Gorras</option>
+            <option value="piercings">Piercings</option>
+        </select>
+        <button onclick="filtrarPorCategoria()">Filtrar por categoría</button>
+        <button onclick="ordenarPorPrecio('asc')">Ordenar por precio ascendente</button>
+        <button onclick="ordenarPorPrecio('desc')">Ordenar por precio descendente</button>
+
+        <div class="container">
+            <p class="textcaall"><i class="fa-solid fa-phone-volume" style="color: #f20202;"></i> call 3246638261</p>
+        </div>
+    </main>
+
+    
+</body>
+</html>

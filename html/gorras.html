@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="carrito.js"></script>
+</head>
+<body>
+    <body>
+        <body>
+      
+        <main>
+                <header>
+                    <nav>
+                        <ul class="menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="zapatos.html">Zapatos</a></li>
+                            <li><a href="gorras.html">Gorras</a></li>
+                            <li><a href="aretes.html">Piercings</a></li>
+                            <li><a href="#" id="carrito">Carrito (0)</a></li>
+                        </ul>
+                    </nav>
+                </header>
+            </main>
+          
+       
+           <div class="todo">
+
+            <div class="producto">
+                <img src="/images/descarga (1).jpg" alt="gorras" class="gorras"/>
+                <h3>ANGELES Dodgers</h3>
+                <p>GORRA ERA AZUL ANGELES DODGERS</p>
+                <p>Precio: $50.000 COP</p>
+                <button onclick="agregarAlCarrito('ANGELES Dodgers',50000)">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="/images/descarga.jpg" alt="gorras" class="gorras"/>
+                <h3>Diseño gorra plana</h3>
+                <p>GORRA NUEVA ERA NEGRA (PLANA)</p>
+                <p>Precio: $40.000 COP</p>
+                <button onclick="agregarAlCarrito('Diseño gorra plana ',40000)">Agregar al carrito</button>
+            </div>
+
+            <div class="producto">
+                <img src="/images/images.jpg" alt="gorras" class="gorras" />
+                <h3>Gorra YANKES</h3>
+                <p>GORRA NEGRA (DISEÑO YANKES)</p>
+                <p>Precio: $40.000 COP</p>
+                <button onclick="agregarAlCarrito('Gorra YANKES ',40000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/new-era-gorra-new-york-yankees-9-forty.webp" alt="gorras" class="gorras"/>
+                <h3>Gorra  YANKES</h3>
+                <p>GORRA buena calidad (DISEÑO YANKES).</p>
+                <p>Precio: $40.000 COP</p>
+                <button onclick="agregarAlCarrito('Gorra YANKES ',40000)">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="/images/s.jpg" alt="gorras" class="gorras"/>
+                <h3>Gorra (NBA)</h3>
+                <p>Gorra blanca de buena calidad.</p>
+                <p>Precio: $40.000 COP</p>
+                <button onclick="agregarAlCarrito('Gorra Blanca (NBA) ',40000)">Agregar al carrito</button>
+            </div></div>
+            <div class="todo">
+                <div class="producto">
+                    <img src="/images/nueva6.png" alt="gorras" class="gorras"/>
+                    <h3>Gorra (NBA)</h3>
+                    <p>GORRA MLB HEART 59FIFTY Cerrada New Era</p>
+                    <p>Precio: $40.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Gorra Blanca (NBA) ',40000)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/nuevo7.png" alt="gorras" class="gorras"/>
+                    <h3>Gorra (NBA)</h3>
+                    <p>GORRA Chain Stitch Heart 59FIFTY Cerrada/ a la medida New Era</p>
+                    <p>Precio: $40.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Gorra Blanca (NBA) ',40000)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/nuevo8.webp" alt="gorras" class="gorras"/>
+                    <h3>Gorra (NBA)</h3>
+                    <p>GORRA NUEVA ERA 59FIFTY OAKLAND ATHLETICS GROOVY</p>
+                    <p>Precio: $40.000 COP</p>
+                    <button  class="btn2" onclick="agregarAlCarrito('Gorra Blanca (NBA) ',40000)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/nuevo9.jpg" alt="gorras" class="gorras"/>
+                    <h3>Gorra (NBA)</h3>
+                    <p>GORRA AZUL CLARA CON LOGO Y BUENA CALIDAD</p>
+                    <p>Precio: $40.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Gorra Blanca (NBA) ',40000)">Agregar al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="/images/nuevo10.jpg" alt="gorras" class="gorras"/>
+                    <h3>GoRRA (NBA)</h3>
+                    <p>Gorra New Era Chicago Bulls.</p>
+                    <p>Precio: $40.000 COP</p>
+                    <button class="btn2" onclick="agregarAlCarrito('Gorra Blanca (NBA) ',40000)">Agregar al carrito</button>
+                </div>
+            </div>
+
+            <button onclick="abrirVentanaModal()">Crear Nuevo/Modificar Existente</button>
+
+
+            <div id="miVentanaModal" class="ventana-modal">
+                <div class="contenido-ventana-modal">
+                  <span class="cerrar" onclick="cerrarVentanaModal()">&times;</span>
+                  <h2>Crear/Modificar Producto</h2>
+                  <form id="formularioProducto">
+                    <label for="nombreProducto">Nombre del producto:</label><br>
+                    <input type="text" id="nombreProducto" name="nombreProducto"><br>
+                    <label for="precioProducto">Precio:</label><br>
+                    <input type="number" id="precioProducto" name="precioProducto"><br>
+                    <label for="descripcionProducto">Descripción:</label><br>
+                    <textarea id="descripcionProducto" name="descripcionProducto"></textarea><br>
+                    <button onclick="guardarProducto()">Guardar</button>
+                  </form>
+                </div>
+              </div>
+
+            <div id="carrito">
+                <h2>Carrito de compras</h2>
+                <ul id="listaCarrito">
+                    <!-- Aquí se agregarán los productos seleccionados -->
+                </ul>
+                <p>Total: <span id="totalCarrito">$0.00</span></p>
+                <button onclick="realizarCompra()">Realizar compra <i class="fa-solid fa-cart-shopping" style="color: #092cdc;"></i> </button>
+            </div>
+            </div>
+        
+            
+            
+    
+            <input type="text" id="filtroNombre" placeholder="Filtrar por nombre">
+            <button onclick="filtrarPorNombre()">Filtrar por nombre</button>
+            <select id="filtroCategoria">
+                <option value="todos">Todos</option>
+                <option value="zapatos">Zapatos</option>
+                <option value="gorras">Gorras</option>
+                <option value="piercings">Piercings</option>
+            </select>
+            <button onclick="filtrarPorCategoria()">Filtrar por categoría</button>
+            <button onclick="ordenarPorPrecio('asc')">Ordenar por precio ascendente</button>
+            <button onclick="ordenarPorPrecio('desc')">Ordenar por precio descendente</button>
+    
+            <div class="container">
+                <p class="textcaall"><i class="fa-solid fa-phone-volume" style="color: #f20202;"></i> call 3246638261</p>
+            </div>
+        </main>
+    
+        
+        
+        
+  
+    
+</body>
+</html>
